@@ -47,9 +47,9 @@ namespace jaeger_csharp_frontend_api
 
             // Prevent endless loops when OpenTracing is tracking HTTP requests to Jaeger.
             services.Configure<HttpHandlerDiagnosticOptions>(options =>
-                {
-                    options.IgnorePatterns.Add(x => !x.RequestUri.IsLoopback);
-                });
+            {
+                options.IgnorePatterns.Add(x => !x.RequestUri.IsLoopback);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
